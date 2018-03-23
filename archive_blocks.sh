@@ -14,5 +14,5 @@ DATE=`date -d "now" +'%Y_%m_%d-%H_%M'`
 echo "Archiving Blocks $BLOCKCHAIN_NAME [$DATE]"
 
 ./stop.sh
-tar cvf $PATH_TO_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar blocks
+tar -pcvzf $PATH_TO_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz blocks
 ./start.sh
