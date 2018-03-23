@@ -8,6 +8,7 @@
 PATH_TO_ARCH="."
 DATE=`date -d "now" +'%Y_%m_%d-%H_%M'`
 
+echo "Archiving Blocks [$DATE]"
 
 ./stop.sh
 tar cvf $PATH_TO_ARCH/blocks-$DATE.tar blocks
