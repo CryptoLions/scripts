@@ -7,13 +7,15 @@
 # Change networkName to your blockchain network name
 ###############################################################################  
 
-PATH_TO_ARCH="/var/www/html/blocks"
+DATA_DIR="/path/to/data-dir"
+PATH_FOR_ARCH="/var/www/html/blocks"
 BLOCKCHAIN_NAME="networkName"
+
+
 DATE=`date -d "now" +'%Y_%m_%d-%H_%M'`
+echo "Archiving BlockChain $BLOCKCHAIN_NAME [$DATE]"
 
-echo "Archiving Blocks $BLOCKCHAIN_NAME [$DATE]"
-
-./stop.sh
-tar -pcvzf $PATH_TO_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz blocks  
-ln -sf $PATH_TO_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz $PATH_TO_ARCH/blocks.tar.gz  
-./start.sh
+$DATA_DIR/stop.sh
+tar -pcvzf $PATH_FOR_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz $DATA_DIR/blocks
+ln -sf $PATH_FOR_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz $PATH_FOR_ARCH/jungleBlocks.tar.gz
+$DATA_DIR/start.sh
