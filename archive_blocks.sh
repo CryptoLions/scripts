@@ -17,5 +17,5 @@ echo "Archiving BlockChain $BLOCKCHAIN_NAME [$DATE]"
 
 $DATA_DIR/stop.sh
 tar -pcvzf $PATH_FOR_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz $DATA_DIR/blocks
-ln -sf $PATH_FOR_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz $PATH_FOR_ARCH/jungleBlocks.tar.gz
+ln -sf $PATH_FOR_ARCH/blocks-$BLOCKCHAIN_NAME-$DATE.tar.gz $PATH_FOR_ARCH/blocks.tar.gz
 $DATA_DIR/start.sh
