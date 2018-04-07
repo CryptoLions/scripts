@@ -7,10 +7,10 @@
 ###############################################################################
 
 
-EOSIOBINDIR=/path/to/eos/bin
+EOSIOBINDIR=/home/eos-dawn-v3.0.0/eos/build/programs
 DATADIR=/path/to/data-dir
 
-$EOSIOBINDIR/eosiod --data-dir $DATADIR  > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/eosd.pid
+$EOSIOBINDIR/nodes/nodes --data-dir $DATADIR  > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/eosd.pid
 
-#$EOSIOBINDIR/eosiod --replay --data-dir $DATADIR  > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/eosd.pid
-#$EOSIOBINDIR/eosiod --enable-stale-production true --data-dir $DATADIR  > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/eosd.pid
+$EOSIOBINDIR/nodes/nodes --replay --data-dir $DATADIR  > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/eosd.pid
+$EOSIOBINDIR/nodes/nodes --enable-stale-production true --data-dir $DATADIR  > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/eosd.pid
