@@ -8,6 +8,7 @@
 
 EOSIOBINDIR=/home/eos-dawn-v3.0.0/eos/build/programs
 WALLETHOST="127.0.0.1"
-WALLETPORT="8888"
+NODEPORT="8887"
+WALLETPORT="8887"
 
-$EOSIOBINDIR/cleos/cleos --wallet-host $WALLETHOST --wallet-port $WALLETPORT $@
+$EOSIOBINDIR/cleos/cleos -p $NODEPORT --wallet-host $WALLETHOST --wallet-port $WALLETPORT $@
