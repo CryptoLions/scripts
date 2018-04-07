@@ -11,4 +11,4 @@ WALLETHOST="127.0.0.1"
 NODEPORT="8888"
 WALLETPORT="8888"
 
-$EOSIOBINDIR/cleos/cleos -p $NODEPORT --wallet-host $WALLETHOST --wallet-port $WALLETPORT $@
+$EOSIOBINDIR/cleos/cleos -p $NODEPORT --wallet-host $WALLETHOST --wallet-port $WALLETPORT "$@"
