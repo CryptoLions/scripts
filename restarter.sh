@@ -39,7 +39,7 @@ CHECK_INTERVAL=5; #in seconds
 # Initialization Lock File
 # -------------------------------------------
 PDIR=${0%`basename $0`}
-LCK_FILE=`basename $0`.lck
+LCK_FILE=$PDIR`basename $0`.lck
 
 
 # -------------------------------------------
