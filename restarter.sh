@@ -10,7 +10,7 @@
 # - edit Email data (Lines 18-21), Nodes Pids files and daemon up scripts (Lines 27-33)
 # - To Control if restarter.sh is runned every 5 add record to /etc/crontab:  
 #     */5 *  * * *  root  /opt/restarter.sh
-# - fi you dont wont send emails please cooment lines 152 and 156
+# - if you dont wont send emails please cooment lines 152 and 156
 #
 ###############################################################################
 
