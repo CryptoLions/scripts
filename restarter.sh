@@ -52,7 +52,7 @@ TEST_RUNNING=`ps -p ${MYPID} | grep ${MYPID}`
 
 if [ -z "${TEST_RUNNING}" ]; then
     #echo "Not running"
-    echo $$ > $PDIR"${LCK_FILE}"
+    echo $$ > "${LCK_FILE}"
 else
     echo "`basename $0` is already running [${MYPID}]"
     exit 0
@@ -61,7 +61,7 @@ fi
 
 else
     #echo "Not running"
-    echo $$ > $PDIR"${LCK_FILE}"
+    echo $$ > "${LCK_FILE}"
 fi
 
 
