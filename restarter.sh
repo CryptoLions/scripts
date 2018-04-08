@@ -7,9 +7,10 @@
 # Script since 2009 to control and restart daemons
 # please download script for example in folder /opt/restarter.sh
 # - add rights for execution: chmod 700 /opt/restarter.sh
-# - edit Email data (Lines 15-18), Nodes Pids files and daemon up scripts (Lines 25-30)
+# - edit Email data (Lines 18-21), Nodes Pids files and daemon up scripts (Lines 27-33)
 # - To Control if restarter.sh is runned every 5 add record to /etc/crontab:  
 #     */5 *  * * *  root  /opt/restarter.sh
+# - fi you dont wont send emails please cooment lines 152 and 156
 #
 ###############################################################################
 
