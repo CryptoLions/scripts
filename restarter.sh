@@ -104,7 +104,9 @@ check_process() {
   [ ! -f ${DaemonsPIDs[$1]} ] && return 0
 
   pid=$(cat ${DaemonsPIDs[$1]})
-  [ ! -d "/proc/$pid/fd" ] && return 0 || return 1
+  TEST_RUNNING=`ps -p ${pid} | grep ${pid}`
+  [ -z "${TEST_RUNNING}" ] && return 0 || return 1
+
 }
 
 
