@@ -8,9 +8,13 @@
 #
 ################################################################################
 
-SERVER="dev.cryptolions.io:8888"
-WORKERS=1000
-JOB_PERWORKER=50
+SERVER="dev.cryptolions.io"
+PORT="8888"
+
+WORKERS=100
+JOB_PERWORKER=100
+#1 - curl, 0 - nodeos
+ISCURL=0
 
 declare -A WORK=()
 declare -A WORK_RES=()
@@ -20,7 +24,7 @@ STARTTIME=$(date +%s.%N)
 for i in $(seq 1 $WORKERS);
 do
     WORK_RES[$i]="worker_$i"
-    ./tx.sh $SERVER $JOB_PERWORKER > ${WORK_RES[$i]} &
+    ./tx.sh $SERVER $PORT $JOB_PERWORKER $ISCURL > ${WORK_RES[$i]} &
     WORK[$i]=$!
     echo "Worker $i started"
 done
@@ -49,3 +53,4 @@ echo "OK Requests: $REQUEST_OK"
 echo "Total Requests: "$(($REQUEST_OK+$REQUEST_FAILED))
 
 echo "Finished. Time: $DIFF sec."
+
