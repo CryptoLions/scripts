@@ -9,8 +9,8 @@
 ################################################################################
 
 SERVER="dev.cryptolions.io:8888"
-WORKERS=10
-JOB_PERWORKER=500
+WORKERS=1000
+JOB_PERWORKER=50
 
 declare -A WORK=()
 declare -A WORK_RES=()
