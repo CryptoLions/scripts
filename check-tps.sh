@@ -4,6 +4,8 @@
 # Scrip Created by http://CryptoLions.io
 # For EOS Junlge testnet
 #
+# TPS Counter
+#
 # https://github.com/CryptoLions/
 #
 ################################################################################
