@@ -8,7 +8,7 @@
 #
 ################################################################################
 
-#!/bin/bash
+CLEOS="./cleos.sh"
 
 FROM=$1
 TO=$2
@@ -21,7 +21,7 @@ echo -ne "\nTesting TPS: \n\n"
 
 for i in $(seq $FROM $TO); do
 
-    block=$(./cleos.sh get block $i)
+    block=$($CLEOS get block $i)
 
     COUNT_TX=$(jq '.transactions | length' <<<  $block)
 
