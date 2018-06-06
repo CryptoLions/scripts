@@ -32,7 +32,7 @@ do
             ANSWER_OK=true
         fi
     else
-        response=$(./cleos -H $SERVER -p $PORT get info)
+        response=$(./cleos.sh get info)
         if [[ "$response" =~ "head_block_time" ]]; then
             ANSWER_OK=true
         fi
