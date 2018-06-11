@@ -1,0 +1,59 @@
+
+{
+	"producer_account_name": "cryptolions1",
+	"producer_public_key": "EOS5yHaUBwhpwFftNjADdVwBpCVybLPg5P3z7HpTbDGjUfpqwWSSf",
+	"org": {
+		"candidate_name": "CryproLions",
+		"website": "http://cryptolions.io",
+		"code_of_conduct": "https://steemit.com/eos/@cryptolions/crypto-lions-policy-positions-and-code-of-conduct",
+		"email": "roar@cryptolions.io",
+		"branding": {
+			"logo_256": "",
+			"logo_1024": "",
+			"logo_svg": ""
+		},
+		"location": {
+			"name": "Ukraine",
+			"country": "UA",
+			"latitude": 49.8397,
+			"longitude": 24.0297
+		},
+		"social": {
+			"steemit": "https://steemit.com/@cryptolions",
+			"twitter": "https://twitter.com/EOS_CryptoLions",
+			"youtube": "https://www.youtube.com/channel/UCB7F-KO0mmZ1yVBCq0_1gtA",
+			"facebook": "",
+			"github": "https://github.com/CryptoLions",
+			"reddit": "",
+			"keybase": "cryptolions",
+			"telegram": "https://t.me/block_producer_candidate",
+			"wechat": ""
+		}
+	},
+	"nodes": [
+		{
+			"location": {
+				"name": "bp01",
+				"country": "Germany",
+				"latitude": 51.2993,
+				"longitude": 9.491
+			},
+			"is_producer": false,
+			"p2p_endpoint": "http://bp01.cryptolions.io:19876",
+			"api_endpoint": "http://bp.cryptolions.io:8888",
+			"ssl_endpoint": ""
+		},
+		{
+			"location": {
+				"name": "bp02",
+				"country": "Finland",
+				"latitude": 60.1708,
+				"longitude": 24.9375
+			},
+			"is_producer": false,
+			"p2p_endpoint": "http://bp01.cryptolions.io:29876",
+			"api_endpoint": "http://bp.cryptolions.io:8888",
+			"ssl_endpoint": ""
+		}
+	]
+}
