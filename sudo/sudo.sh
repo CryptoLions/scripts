@@ -2,7 +2,7 @@
 ################################################################################################################
 #
 # Scrip Created by http://CryptoLions.io
-# Sudo contract tests
+# Sudo contract tests (uncomment one command before run)
 #
 # https://github.com/CryptoLions/
 #
