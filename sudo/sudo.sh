@@ -87,7 +87,7 @@ NEWKEY="EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"
 ## ref_block_prefix -> 0 
 
 #./cleos.sh sudo exec -s -j -d eosio sudo_upd_acc.json > sudo_upd2_acc.json
-## expiration -> enougth to sign by 15 bps
+## expiration -> enought to sign by 15 bps
 ## ref_block_num -> 0
 ## ref_block_prefix -> 0 
 
