@@ -34,10 +34,10 @@ NEWKEY="EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"
 
 ## ------ sudo change Account permissions-------------------
 
-##1.1 prepare chnage owner permission to new owner Key transaction:
+##1.1 prepare changing owner permission to new owner Key transaction:
 #./cleos.sh set account permission -s -j -d $ACC owner $NEWKEY > sudo_upd_acc.json
 
-##1.2 prepare chnage owner permission to eosio@active Key transaction:
+##1.2 prepare changing owner permission to eosio@active Key transaction:
 #./cleos.sh set account permission -s -j -d $ACC owner '{"threshold": 1, "accounts": [{"permission": {"actor": "eosio", "permission": "active"}, "weight": 1}]}' > sudo_upd_acc.json
 
 ## Make changes in generated sudo_upd_acc.json:
