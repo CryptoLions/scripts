@@ -13,7 +13,7 @@ DIR="/path/to/data-dir"
         pid=`cat $DIR"/eosd.pid"`
         echo $pid
         kill $pid
-        rm -r $DIR"/eosd.pid"
+        
         
         echo -ne "Stoping Node"
 
@@ -22,6 +22,8 @@ DIR="/path/to/data-dir"
             echo -ne "."
             sleep 1
         done
+        rm -r $DIR"/eosd.pid"
+        
         DATE=$(date -d "now" +'%Y_%m_%d-%H_%M')
         if [ ! -d $DIR/logs ]; then
             mkdir $DIR/logs
