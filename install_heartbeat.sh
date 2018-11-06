@@ -1,4 +1,13 @@
 #!/bin/bash
+################################################################################
+#
+# Scrip Created by http://CryptoLions.io
+# https://github.com/CryptoLions/scripts/edit/master/install_heartbeat.sh
+#
+###############################################################################
+
+
+#!/bin/bash
 
 #Sources Dir
 DIR="/opt/EOSIO"
