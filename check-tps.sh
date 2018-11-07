@@ -26,14 +26,17 @@ for i in $(seq $FROM $TO); do
     block=$($CLEOS get block $i)
 
     COUNT_TX=$(jq '.transactions | length' <<<  $block)
+    producer=$(jq '.producer' <<<  $block)
 
     TPS=$(($COUNT_TX+$LAST_TX_COUNT))
 
     if [[ $TPS -ge $MAX_TPS ]]; then
         MAX_TPS=$TPS
+        MAX_TPS_PRODUCER=$producer
     fi
 
-    echo -ne "Block: $i  | TX COUNT: $COUNT_TX | CURRENT TPS: $TPS | MAX_TPS: $MAX_TPS                                   \r"
+    echo -ne "Block: $i $producer | TX COUNT: $COUNT_TX | CURRENT TPS: $TPS | MAX_TPS: $MAX_TPS $MAX_TPS_PRODUCER                                  
+        \r"
     #echo $block;
 
     LAST_TX_COUNT=$COUNT_TX
