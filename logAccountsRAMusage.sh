@@ -3,6 +3,8 @@
 #
 # Script Created by http://CryptoLions.io
 # For EOSIO blockchains
+# 
+# Will record and compare accounts ram usage between script runs. 
 #
 # https://github.com/CryptoLions/
 #
